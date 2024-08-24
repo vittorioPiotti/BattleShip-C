@@ -10,6 +10,11 @@ Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita co
 > [!TIP]
 > Corretto funzionamento garantito
 
+### Support Me
+
+[<img width="200" src="https://github.com/vittorioPiotti/vittorioPiotti/blob/main/immagini/support.png"/>](https://ko-fi.com/vittoriopiotti)
+
+
 ## Screenshots
 
 |<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap4.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap5.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap6.png">|
