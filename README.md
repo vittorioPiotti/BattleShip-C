@@ -12,7 +12,7 @@ Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita co
 
 ## Screenshots
 
-|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap1.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap2.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap3.png">|
+|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap4.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap5.png">|<img width="300" src="https://github.com/vittorioPiotti/Battaglia-Navale-C/blob/main/snap6.png">|
 |-|-|-|
 |1|2|3|
 
