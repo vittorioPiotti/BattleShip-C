@@ -38,7 +38,7 @@ void visualeAssoluta ( int, int, int [Y][X] );                 //stampa la matri
 void updateCampo ( int [Y][X], int [Y][X], int [Y][X] );     //aggiorna la visualizzazione a schermo dei campi
 void copiaCampo ( int [Y][X], int [Y][X] );                //copia gli elementi di una matrice in un altra per far si che lo stesso campo sia gestito in modi diversi
 //Gestione schieramento navi
-                              
+
 int genCoordManX ( char [] );                              //inserimento in input del valore della coordinata x
 int genCoordManY ( char [] );                              //inserimento in input del valore della coordinata y
 
@@ -121,10 +121,10 @@ int main(int argc, const char * argv[]) {
     cNave1 = 0;
     cNave2 = 0;
     cNave3 = 0;
-    
-    
-    
-    
+
+
+
+
     do {
         azzeraCampo(campoIA);
         generaNave(P,campoIA);
@@ -142,8 +142,8 @@ int main(int argc, const char * argv[]) {
         printf("\n\tInserisci il tuo nickname: ");
         scanf( "%s", nick );
     } while ( strlen ( nick ) > K  );
-            
-            
+
+
             printf ( "\n\nA sinistra il tuo campo\t\t\t\tAl centro la visuale nemica sul tuo\t\t\tA destra quello nemico\n" );
     updateCampo(myCampo2,myCampo,campoIA);
     printf ( "\n\n\tSchiera navi\n\t\t1.automaticamente\n\t\t2.manualmente\n\n" );
@@ -162,7 +162,7 @@ int main(int argc, const char * argv[]) {
                 generaNave(U,myCampo);
                 generaNave(U,myCampo);
             } while ( controllo(L,myCampo) != 0 );
-            
+
             break;
         case 2:
             azzeraCampo(myCampo);
@@ -172,7 +172,7 @@ int main(int argc, const char * argv[]) {
                     printf ( "\tScelgo: " );
                     scanf ( "%d", &scelta );
                 }while ( scelta < 1 || scelta > 4 );
-                
+
                 switch( scelta ){
                     case 1:
                         printf ( "\n\tscegli nave da schierare:\n\t\t1.sottomarino\n\t\t2.torpediniere\n\t\t3.lancia\n\n" );
@@ -185,7 +185,7 @@ int main(int argc, const char * argv[]) {
                             copiaCampo(myCampo,myCampo2);
                             updateCampo(myCampo2,myCampo,campoIA);
                             cNave1++;
-                            
+
                         }
                         else if ( choice == 2 && cNave2 < 2 ) {
                             orientaNaveUpMan(lett,O,myCampo);
@@ -199,7 +199,7 @@ int main(int argc, const char * argv[]) {
                             updateCampo(myCampo2,myCampo,campoIA);
                             cNave3++;
                         }
-                        
+
                         break;
                     case 2:
                         printf ( "\n\tscegli nave da schierare:\n\t\t1.sottomarino\n\t\t2.torpediniere\n\t\t3.lancia\n\n" );
@@ -225,8 +225,8 @@ int main(int argc, const char * argv[]) {
                             updateCampo(myCampo2,myCampo,campoIA);
                             cNave3++;
                         }
-                        
-                        
+
+
                         break;
                     case 3:
                         printf ( "\n\tscegli nave da schierare:\n\t\t1.sottomarino\n\t\t2.torpediniere\n\t\t3.lancia\n\n" );
@@ -278,8 +278,8 @@ int main(int argc, const char * argv[]) {
                             cNave3++;
                         }
                 }
-                
-                
+
+
                 if ( cNave1 == 0 ) printf ( "\n\nHai un sottomarino da schierare!" );
                 else printf ( "\n\nNon hai altri sottomarini da schierare!" );
                 if ( cNave2 == 0 ) printf ( "\n\nHai altri due torpedinieri da schierare!" );
@@ -289,14 +289,14 @@ int main(int argc, const char * argv[]) {
                 else if ( cNave3 == 1 ) printf ( "\n\nHai altre due lancie da schierare!" );
                 else if ( cNave3 == 2 ) printf ( "\n\nHai un altra lancia da schierare! ");
                 else printf ( "\n\nNon hai altre lancie da schierare!" );
-                
+
             }while ( cNave1 != 1 || cNave2 != 2 || cNave3 != 3 );
     }
     copiaCampo(myCampo,myCampo2);
     updateCampo(myCampo2,myCampo,campoIA);
     printf ( "\n\nLe navi sono state schierate" );
-    
-    
+
+
     printf ( "\n\n\tTesta o croce per iniziare...\n\t\t1.testa\n\t\t2.croce\n\n" );
     do {
         printf ( "\tscelgo: " );
@@ -310,19 +310,19 @@ int main(int argc, const char * argv[]) {
     do{
         scanf ( "%d", &choice);
     }while ( choice!= 1 && choice != 2);
-   
+
             if ( scelta != moneta ){
                 printf ( "\n\n\n\n\n\n\n\n\n\n\n\n\tTURNO: 1" );
                 printf ( "\n\nGuarda e impara!" );
                 autoAttacco(lett,myCampo);
                 affondaNave(myCampo);
                 updateCampo(myCampo2,myCampo,campoIA);
-                
+
                 printf ( "\n\nLa mossa spetta a %s",nick );
                 attacco(lett,campoIA);
                 affondaNave(campoIA);
                 updateCampo(myCampo2,myCampo,campoIA);
-                
+
                 for ( i = 1; i < 99; i ++ ) {
                     printf ( "\n\n\n\n\n\n\n\n\n\n\n\n\tTURNO: %2d\n", i + 1 );
                     printf ( "\n\nLa mossa spetta al nemico" );
@@ -335,7 +335,7 @@ int main(int argc, const char * argv[]) {
                         break;
                     }
                     printf ( "\n\nLa mossa spetta a %s",nick );
-                    
+
                     if ( choice == 1)autoAttacco(lett,campoIA);
                     else attacco(lett,campoIA);
                     affondaNave(campoIA);
@@ -361,7 +361,7 @@ int main(int argc, const char * argv[]) {
                 for(i = 1; i < 99; i++ ){
                     printf( "\n\n\n\n\n\n\n\n\n\n\n\n\tTURNO: %2d\n" , i + 1 );
                     printf ( "\n\nLa mossa spetta a %s",nick );
-                    
+
                     if ( choice == 1)autoAttacco(lett,campoIA);
                     else attacco(lett,campoIA);
                     affondaNave(campoIA);
@@ -382,8 +382,8 @@ int main(int argc, const char * argv[]) {
                     }
                 }
             }
-           
- 
+
+
     printf ( "\n\n\n\tScopriamo le carte!\n\n\tQuesti sono i campi con la disposizione delle navi:\n\n\tQuesto è il tuo campo\t\t\t\t\tQuesto è il campo nemico\n" );
     for( i = 0; i < Y; i ++ ) {
         printf ( "\n\t%2d", i + 1 );
@@ -396,8 +396,8 @@ int main(int argc, const char * argv[]) {
         }
     }
     printf( "\n\t   A B C D E F G H I J\t\t\t\t\t   A B C D E F G H I J\n\n");
-  
-    
+
+
     return 0;
 }
 void azzeraCampo ( int campo[Y][X] ){
@@ -423,7 +423,7 @@ void visualeRelativa ( int i, int j, int campo[Y][X] ) {
 void updateCampo ( int campo1[Y][X], int campo2[Y][X], int campo3[Y][X] ) {
     int i;
     int j;
-    
+
     printf ( "\n\n" );
     printf ( "\t la tua mappa\t\t\t\t\t\t\t visuale nemica\t\t\t\t\t\t\t mappa nemica" );
     for( i = 0; i < X; i ++ ) {
@@ -439,7 +439,7 @@ void updateCampo ( int campo1[Y][X], int campo2[Y][X], int campo3[Y][X] ) {
         for ( j = 0; j < X; j ++ ) {
             visualeRelativa ( i, j, campo3 );
         }
-        
+
     }
     printf( "\n\t   A B C D E F G H I J\t\t\t\t\t   A B C D E F G H I J\t\t\t\t\t   A B C D E F G H I J" );
 }
@@ -451,7 +451,7 @@ int genCoordManX ( char lett[] ) {
         printf ( "\t\tcoordinata alfanuemrica\n\t\t\tx = " );
         scanf (" %c", &c );
     }while ( ( c < 65 || c > 74 ) && ( c < 97 || c > 106 ) );
-    
+
     if ( c > 97 || c < 106 ) {
         c = toupper(c);
     }
@@ -525,13 +525,13 @@ void orientaNaveUpMan ( char lett[], int d, int campo[Y][X] ) {
     int y;
     int yo;
     do{
-        
+
         x = genCoordManX(lett);
         do {
             y = genCoordManY(lett);
             yo = y;
         }while ( y < d - 1 );
-       
+
     }while ( controlloSchieraTop ( d, x, y, yo, campo ) != 0 );
 }
 void orientaNaveDexMan ( char lett[], int d, int campo[Y][X] ) {
@@ -711,7 +711,7 @@ void affondaNave ( int campo[Y][X] ) {
         for ( j = 0; j < Y; j ++ ) {
             //affonda lancia
             if(campo[i][j] == 3 ) {
-                
+
                 if ( ( campo[i + 1][j] == 0 || campo[i + 1][j] == 2 ) && (campo[i - 1][j] == 0 || campo[i - 1][j] == 2 ) && (campo[i][j - 1] == 0 || campo[i][j - 1] == 2 ) && ( campo[i][j + 1] ==0 || campo[i][j + 1] == 2 ) ) {
                     campo[i][j] = 4;
                     printf ( "\n\n\tLancia affondata!\n\n" );
@@ -723,7 +723,7 @@ void affondaNave ( int campo[Y][X] ) {
                     campo[i + 1][j] = 4;
                     printf ( "\n\n\tTorpediniere affondato!\n\n" );
                 }
-                
+
                 //bot
                 else if(campo[i - 1][j] == 3 && (campo[i - 2][j] == 0 || campo[i - 2][j] == 2 ) && ( campo[i + 1][j] == 0 || campo[i + 1][j] == 2 ) ) {
                     campo[i][j] = 4;
@@ -801,9 +801,9 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         }
         if ( check == 1 ) break;
     }
-    
+
     if ( check == 0 ) return check;
-    
+
     //salvati virtualmente gli indici con il break si studiano le caselle adiacenti
     //quelle da ignorare: se una o più caselle adiacenti scoperte uguali a 2 o risulta che il punto di riferimento sia adiacente ad uno o più bordi allora ignora prima le caselle marginali con i bordi e quelle pari a 2 affinchè: .1 non vengano riattaccate e .2 permettano di mirare un attacco coeso e logico per affondare una nave
     //quelle da considerare: se una o più caselle adiacenti scoperte uguali a 3 allora considararle per attaccare applicando un algoritmo atto ad affondare la nave attaccata
@@ -817,10 +817,10 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
     else if ( campo[i+1][j] == 3 ) bot = 2; //casella bot nave scoperta = studia per attacco mirato
     if ( campo[i][j-1] == 2 || j == 0 ) sin = 1; //casella sin inesistente o acqua scoperta = ignora
     else if ( campo[i][j-1] == 3 ) sin = 2; //casella sin nave scoperta = studia per attacco mirato
-    
-    
-    
-    
+
+
+
+
     //possibili casistiche di attacco per affondare una nave di cui si ha un punto di riferimento come nave colpita ma non affondata
     //se adiacente al bordo superiore del mio punto di riferimento ho una nave colpita ma non affondata allora procedo ad attaccare il punto adiacente al bordo base  se questo esiste e non è una casella acqua scoperta di stato 2
     if ( top == 2 && bot == 0  ) {
@@ -838,7 +838,7 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         j = j - 1;
         esitoAttacco(j,i,lett,campo);
         return check;
-        
+
     }
     else if ( dex == 2 && ( campo[i][j + 2] == 0 || campo[i][j + 2] == 1 ) && j <= 7  ) {
         j = j + 2;
@@ -867,10 +867,10 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
-    
-    
-    
+
+
+
+
     //tutte le caselle adiacenti sono coperte quindi ne attacco una a caso
     if ( top == 0 && dex == 0 && bot == 0 && sin == 0 ) {
         //scelta casuale casella da attaccare
@@ -886,11 +886,11 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
 
-    
-    
-    
+
+
+
+
     //tutte le caselle adiacenti sono bersagliabili tranne quella adiacente verso l'alto quindi attacco a caso una fra tutte escludendo questa
     if ( top == 1 && dex == 0 && bot == 0 && sin == 0 ) {
         //scelta casuale casella da attaccare
@@ -943,13 +943,13 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     //casistiche di attacco con due celle adiacenti di stato 2
     //se top e dex adiacenti e di stato due con bot e sin bersagliabili perchè identificati di stato 0
     if ( top == 1 && dex == 1 && bot == 0 && sin == 0 ) {
@@ -995,7 +995,7 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
+
     //se bot e sin adiacenti e di stato due con bot e sin bersagliabili perchè identificati di stato 0
     if ( top == 0 && dex == 0 && bot == 1 && sin == 1 ) {
         //scelta casuale casella da attaccare
@@ -1007,7 +1007,7 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
+
     //se dex e sin adiacenti e di stato due con bot e sin bersagliabili perchè identificati di stato 0
     if ( top == 0 && dex == 1 && bot == 0 && sin == 1 ) {
         //scelta casuale casella da attaccare
@@ -1019,12 +1019,12 @@ int attaccoForzato ( char lett[], int campo[Y][X] ) {
         esitoAttacco(j,i,lett,campo);
         return check;
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     //casistiche di attacco con 3 celle adiacenti di stato 2
     //posso attaccare solo top
     if ( top == 0 && dex == 1 && bot == 1 && sin == 1 ) {
