@@ -29,4 +29,4 @@ Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita co
 
 | Componente         | Versione  | Copyright                         | Licenza                                                       |
 |--------------------|-----------|-----------------------------------|---------------------------------------------------------------|
-| [DijkstraAlgorithm](https://github.com/vittorioPiotti/BattleShip-C) | [v1.0.0](https://github.com/vittorioPiotti/BattleShip-C/releases/tag/v1.0.0)    | 2024 Vittorio Piotti [(GitHub page)](https://github.com/vittorioPiotti) [(Personal page)](https://vittoriopiotti.altervista.org/)            | [GPL-3.0 ](https://github.com/vittorioPiotti/Dijkstra-Bootstrap/blob/main/LICENSE.md) |
+| [DijkstraAlgorithm](https://github.com/vittorioPiotti/BattleShip-C) | [v1.0.0](https://github.com/vittorioPiotti/BattleShip-C/releases/tag/v1.0.0)    | 2024 Vittorio Piotti [(GitHub page)](https://github.com/vittorioPiotti) [(Personal page)](https://vittoriopiotti.altervista.org/)            | [GPL-3.0 ](https://github.com/vittorioPiotti/attleShip-C/blob/main/LICENSE.md) |
