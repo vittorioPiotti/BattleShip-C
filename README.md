@@ -1,7 +1,8 @@
 # Battaglia Navale C
 
 > [!IMPORTANT]
-> AI free
+> **AI Free**: Questo contenuto è stato creato senza l'ausilio di intelligenza artificiale.
+
 
 Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita contro un bot o di simulare una partita bot contro bot vedendo subito i risultati
 
