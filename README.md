@@ -5,6 +5,8 @@ Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita co
 > [!NOTE]
 > Progetto scolastico
 
+> [!NOTE]
+> AI FREE
 
 > [!TIP]
 > Corretto funzionamento garantito
