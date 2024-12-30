@@ -7,7 +7,7 @@
 Gioco di Battaglia Navale sviluppato in C che permette di giocare una partita contro un bot o di simulare una partita bot contro bot vedendo subito i risultati
 
 > [!NOTE]
-> Progetto scolastico 🎓
+> Progetto scolastico 🎓 · Ⅲ
 
 
 
